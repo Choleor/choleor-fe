@@ -1,0 +1,138 @@
+<html>
+    <head>
+        <title>Choleor-choreo select</title>
+        <link rel="shorcut icon" href="#">
+        <link type="text/css" href="../../vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+        <link type="text/css" href="../../css/neumorphism.css" rel="stylesheet">
+        <style>
+            .spinner-container {
+                position: absolute;
+                padding-left: 50%;
+                padding-top: 25%;
+                width: 50px;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 3;
+            }
+            .spinner {
+                animation: spin 2s linear infinite;
+            }
+            @keyframes spin {
+                from {
+                    transform: rotate(0);
+                }
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <section class="section section bg-primary pb-3 pt-6 overflow-hidden">
+                <div class="container position-relative">
+                    <div class="row justify-content-center pt-1">
+                        <div class="col-lg-8 col-xl-12">
+                            <p class="lead text-cust2 text-color-cust1 text-shadow-cust1 mb-3" style="font-size: 1.1rem;">Select choreography you want (<span id="currPage"></span>/<span id="intervalNum")></span>)</p>
+                            <div class="row">
+                                <div class="col-md-2 text-cust2">
+                                    <button type="button" class="btn btn-primary btn-block btn-thumbnail pt-2 pb-2 pl-2 pr-2" onclick="video_btn_clicked(0)">
+                                        <img class="thumbnail" src="">
+                                    </button>
+                                </div>
+                                <div class="col-md-2 text-cust2">
+                                    <button type="button" class="btn btn-primary btn-block btn-thumbnail pt-2 pb-2 pl-2 pr-2" onclick="video_btn_clicked(1)">
+                                        <img class="thumbnail" src="">
+                                    </button>
+                                </div>
+                                <div class="col-md-2 text-cust2">
+                                    <button type="button" class="btn btn-primary btn-block btn-thumbnail pt-2 pb-2 pl-2 pr-2" onclick="video_btn_clicked(2)">
+                                        <img class="thumbnail" src="">
+                                    </button>
+                                </div>
+                                <div class="col-md-2 text-cust2">
+                                    <button type="button" class="btn btn-primary btn-block btn-thumbnail pt-2 pb-2 pl-2 pr-2" onclick="video_btn_clicked(3)">
+                                        <img class="thumbnail" src="">
+                                    </button>
+                                </div>
+                                <div class="col-md-2 text-cust2">
+                                    <button type="button" class="btn btn-primary btn-block btn-thumbnail pt-2 pb-2 pl-2 pr-2" onclick="video_btn_clicked(4)">
+                                        <img class="thumbnail" src="">
+                                    </button>
+                                </div>
+                                <div class="col-md-2 text-cust2">
+                                    <button type="button" class="btn btn-primary btn-block btn-thumbnail pt-2 pb-2 pl-2 pr-2" onclick="video_btn_clicked(5)">
+                                        <img class="thumbnail" src="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section pt-1 pb-1">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-2">
+                            <span type="button" id="before-page" class="fas fa-angle-left fa-2x" style="position:absolute; top:50%; left:50%;" onclick="beforePage()"></span>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card bg-primary border-light shadow-soft">
+                                <div class="card-body">
+                                    <div class="spinner-container">
+                                        <div class="spinner"><i class="fas fa-spinner fa-3x" style="color: white;"></i></div>
+                                    </div>
+                                    <video controls autoplay id=choreo_select_vid class="card-img-top rounded" >
+                                        Sorry, your browser doesn't suppot embedded videos.
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <span type="button" id="next-page" class="fas fa-angle-right fa-2x" style="position:absolute; top:50%; left:50%;" onclick="nextPage()"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-6">
+                            <button type="button" class="btn btn-primary text-cust2" onclick = "location.href='interval-select.html'" style="position:absolute; bottom:0px;">Previous</button>
+                        </div>
+                        <div class="col-md-6">
+                            <button type="button" id="next-button" class="btn btn-primary text-cust2" onclick = "nextButton()" style="position:absolute; bottom:0px; right:0px">&nbsp;&nbsp;&nbsp;Next &nbsp;&nbsp;</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    <!-- Core -->
+<script src="../../vendor/jquery/dist/jquery.min.js"></script>
+<script src="../../vendor/popper.js/dist/umd/popper.min.js"></script>
+<script src="../../vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../../vendor/headroom.js/dist/headroom.min.js"></script>
+
+<!-- Vendor JS -->
+<script src="../../vendor/onscreen/dist/on-screen.umd.min.js"></script>
+<script src="../../vendor/nouislider/distribute/nouislider.min.js"></script>
+<script src="../../vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<script src="../../vendor/waypoints/lib/jquery.waypoints.min.js"></script>
+<script src="../../vendor/jarallax/dist/jarallax.min.js"></script>
+<script src="../../vendor/jquery.counterup/jquery.counterup.min.js"></script>
+<script src="../../vendor/jquery-countdown/dist/jquery.countdown.min.js"></script>
+<script src="../../vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+<script src="../../vendor/prismjs/prism.js"></script>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- Neumorphism JS -->
+<script src="../../assets/js/neumorphism.js"></script>
+<script src="../../assets/js/choreoSelector.js"></script>
+<script src="../../assets/js/server_message.js"></script>
+    </body>
+</html>
+                            
+                    

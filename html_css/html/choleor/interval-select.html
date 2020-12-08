@@ -1,0 +1,106 @@
+<html>
+    <head>
+        <title>Choleor-interval select</title>
+        <link rel="shorcut icon" href="#">
+        <link type="text/css" href="../../vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+        <link type="text/css" href="../../css/neumorphism.css" rel="stylesheet">
+    </head>
+    <body>
+        <main>
+            <section class="section bg-primary pb-1 pt-7">
+                <div class="container position-relative">
+                    <div class="row justify-content-center pt-2">
+                        <div class="col-lg-8 col-xl-12">
+                            <p class="lead text-cust2 text-color-cust1 text-shadow-cust1 mb-3" style="font-size: 1.1rem;">Choose interval to make choreo</p>
+                            <div class="card bg-primary shadow-inset border-light">
+                                <div class="card-body">
+                                    <div id="waveform"></div>
+                                    <div class="left-white-box"></div>
+                                    <div class="right-white-box"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section mt-4">
+                <div class="container">
+                    <div class="row mb-4 mb-lg-5">
+                    <!-- Range slider -->
+                        <div class="col-lg-12 col-sm-12" style="padding: 0 24px">
+                        <!-- Range slider container -->
+                            <div id="input-slider-range" data-range-value-min="0" data-range-value-max="180"></div>
+                            <!-- Range slider values -->
+                                <div class="row d-none">
+                                    <div class="col-6">
+                                        <span class="range-slider-value value-low" data-range-value-low="0" id="input-slider-range-value-low"></span>
+                                    </div>
+                                    <div class="col-6 text-right">
+                                        <span class="range-slider-value value-high" data-range-value-high="180" id="input-slider-range-value-high"></span>
+                                    </div>
+                                    <!-- End of range slider values -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col text-center">
+                            <button type="button" id="audioButton" class="btn btn-icon-only-cust1 btn-pill btn-primary" onclick = "audioPlay()">
+                                <span id="audioButtonImg" class="fas fa-play fa-2x ml-2"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div>
+                        <audio id="myAudio">Your viewer dose not support the audio element.</audio>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <button type="button" class="btn btn-primary text-cust2" onclick = "location.href='music-select.html'" style="position:absolute; bottom:0px;">Previous</button>
+                        </div>
+                        <div class="col">
+                            <button type="button" class="btn btn-primary text-cust2" onclick = "post_interver_sec()" style="position:absolute; bottom:0px; right:0px">&nbsp;&nbsp;&nbsp;Next &nbsp;&nbsp;</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    <!-- Core -->
+<script src="../../vendor/jquery/dist/jquery.min.js"></script>
+<script src="../../vendor/popper.js/dist/umd/popper.min.js"></script>
+<script src="../../vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../../vendor/headroom.js/dist/headroom.min.js"></script>
+
+<!-- Vendor JS -->
+<script src="../../vendor/onscreen/dist/on-screen.umd.min.js"></script>
+<script src="../../vendor/nouislider/distribute/nouislider.min.js"></script>
+<script src="../../vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<script src="../../vendor/waypoints/lib/jquery.waypoints.min.js"></script>
+<script src="../../vendor/jarallax/dist/jarallax.min.js"></script>
+<script src="../../vendor/jquery.counterup/jquery.counterup.min.js"></script>
+<script src="../../vendor/jquery-countdown/dist/jquery.countdown.min.js"></script>
+<script src="../../vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+<script src="../../vendor/prismjs/prism.js"></script>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- Neumorphism JS -->
+<script src="../../assets/js/neumorphism.js"></script>
+
+<!-- Custom JS -->
+<script src="../../assets/js/audioPlayer.js"></script>
+<script src="../../assets/js/server_message.js"></script>
+
+<!-- Waveserfer JS-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.4.0/wavesurfer.min.js"></script>
+
+<!-- Sreamsaver JS -->
+<script src="https://cdn.jsdelivr.net/npm/web-streams-polyfill@2.0.2/dist/ponyfill.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/streamsaver@2.0.3/StreamSaver.min.js"></script>
+    </body>
+</html>
