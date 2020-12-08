@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <title>Choleor-choreo select</title>
+        <link rel="shorcut icon" href="#">
+        <link type="text/css" href="../../vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+        <link type="text/css" href="../../css/neumorphism.css" rel="stylesheet">
+        <style>
+            .spinner-container {
+                position: absolute;
+                padding-left: 50%;
+                padding-top: 25%;
+                width: 50px;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 3;
+            }
+            .spinner {
+                animation: spin 2s linear infinite;
+            }
+            @keyframes spin {
+                from {
+                    transform: rotate(0);
+                }
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <section class="section">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-11">
+                            <div class="card bg-primary border-light shadow-soft">
+                                <div class="card-body">
+                                    <div class="spinner-container">
+                                        <div class="spinner"><i class="fas fa-spinner fa-3x" style="color: white;"></i></div>
+                                    </div>
+                                    <video controls autoplay id="result_video" class="card-img-top rounded" >
+                                        Sorry, your browser doesn't suppot embedded videos.
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container pt-7 mt-4">
+                    <div class="row">
+                        <div class="col">
+                            <button type="button" class="btn btn-primary text-cust2" onclick = "location.href='choreo-select.html'" style="position:absolute; bottom:0px;">Previous</button>
+                        </div>
+                        <div class="col">
+                            <a type="button" id="downloadButton" href='' class="btn btn-primary text-cust2" style="position:absolute; bottom:0px; right:0px; background-color: #444d59; color: #c8d2e0" download>Download</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+<!-- Core -->
+<script src="../../vendor/jquery/dist/jquery.min.js"></script>
+<script src="../../vendor/popper.js/dist/umd/popper.min.js"></script>
+<script src="../../vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../../vendor/headroom.js/dist/headroom.min.js"></script>
+
+<!-- Vendor JS -->
+<script src="../../vendor/onscreen/dist/on-screen.umd.min.js"></script>
+<script src="../../vendor/nouislider/distribute/nouislider.min.js"></script>
+<script src="../../vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<script src="../../vendor/waypoints/lib/jquery.waypoints.min.js"></script>
+<script src="../../vendor/jarallax/dist/jarallax.min.js"></script>
+<script src="../../vendor/jquery.counterup/jquery.counterup.min.js"></script>
+<script src="../../vendor/jquery-countdown/dist/jquery.countdown.min.js"></script>
+<script src="../../vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+<script src="../../vendor/prismjs/prism.js"></script>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<script src="../../assets/js/download.js"></script>
+<script src="../../assets/js/server_message.js"></script>
+    </body>
+</html>

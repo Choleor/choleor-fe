@@ -1,0 +1,131 @@
+<html>
+    <head>
+        <title>Choleor-music select</title>
+        <link rel="shorcut icon" href="#">
+        <link type="text/css" href="../../vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+        <link type="text/css" href="../../css/neumorphism.css" rel="stylesheet">
+    </head>
+    <body>
+        <main>
+            <!-- Section -->
+            <section class="section section-header pt-8 pb-5">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-lg-8 text-center">
+                            <h1 class="display-cust1 text-cust1 text-color-cust1 mb-1">Choleor</h1>
+                            <p class="lead text-cust2 text-color-cust1 text-shadow-cust1 mb-5">Color your choreo style with AI-based Choreo creator</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="d-flex bg-primary align-items-center pb-5">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-md-8 col-lg-7 justify-content-center">
+                        <p class="lead-cust1 text-center text-cust2 text-color-cust1 mb-4">Choose music to create your choreo</p>
+                            <div class="card bg-primary shadow-soft border-light">
+                                <div class="card-body">
+                                    <!-- Tab Nav -->
+                                    <div class="m-2 text-cust2 text-color-cust1">
+                                        <ul class="nav flex-column flex-sm-row" id="tabs-text" role="tablist">
+                                            <li class="nav-item mr-sm-3 mr-md-0">
+                                                <a class="nav-link mr-4 active" id="tabs-text-1-tab" data-toggle="tab" href="#tabs-text-1" role="tab" aria-controls="tabs-text-1" aria-selected="true">Embed link</a>
+                                            </li>
+                                            <li class="nav-item mr-sm-3 mr-md-0">
+                                                <a class="nav-link mr-4" id="tabs-text-2-tab" data-toggle="tab" href="#tabs-text-2" role="tab" aria-controls="tabs-text-2" aria-selected="false">Upload</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- End of Tab Nav -->
+                                    <!-- Tab Content -->
+                                    <div class="tab-content" id="tabcontent1">
+                                        <div class="tab-pane fade show active" id="tabs-text-1" role="tabpanel" aria-labelledby="tabs-text-1-tab">
+                                            <div style="position: relative;">
+                                                <hr class="my-1">
+                                            </div>
+                                            <div style="position: relative; left:1rem; top: -0.6rem;">
+                                                <hr class="my-1" align="left" style="width: 5.5rem; height: 0.2rem; background-color: #44476a;">
+                                            </div>
+                                            <div action="#" class="mt-4">
+                                                <!-- Form -->
+                                                <div class="form-group">
+                                                    <div class="input-group mb-4">
+                                                        <input class="form-control lead-cust2 text-cust2 text-color-cust2" id="exampleInputIcon2" placeholder="Past only YOUTUBE video link" type="text" aria-label="email adress">
+                                                        <div type="button" class="input-group-append" onclick="post_youtubeUrl()">
+                                                            <span class="input-group-text" style="color: #ffffff">
+                                                                Search
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="tabs-text-2" role="tabpanel" aria-labelledby="tabs-text-2-tab">
+                                            <div style="position: relative;">
+                                                <hr class="my-1">
+                                            </div>
+                                            <div style="position: relative; left:8.8rem; top: -0.6rem;">
+                                                <hr class="my-1" align="left" style="width: 4rem; height: 0.2rem; background-color: #44476a;">
+                                            </div>
+                                            <!-- Form -->
+                                            <div action="#" class="mt-4">
+                                                <!-- Form -->
+                                                    <div class="input-group mb-4">
+                                                        <input type="file" accept=".mp3, .opus, .webm, .wav" class="form-control custom-file-input" id="customFile" aria-label="File upload">
+                                                        <label class="custom-file-label_cust1 lead-cust2 text-cust2 text-color-cust2" for="customFile">
+                                                            <span id="file-name">Choose file (.wav)</span>
+                                                        </label>
+                                                        <div type="button" class="input-group-append" onclick="post_musicFile()" style="z-index: 5;">
+                                                            <span class="input-group-text" style="color: #ffffff" id="file-upload">
+                                                                Upload
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            <!-- End of Form -->
+                                        </div>
+                                    </div>
+                                    <!-- End of Tab Content -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section pt-7">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <button type="button" id="next-button" class="btn btn-primary text-cust2" onclick = "location.href='interval-select.html'" style="position:absolute; bottom:0px; right:0px">&nbsp;&nbsp;&nbsp;Next &nbsp;&nbsp;</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+                
+    <!-- Core -->
+    <script src="../../vendor/jquery/dist/jquery.min.js"></script>
+    <script src="../../vendor/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../../vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../../vendor/headroom.js/dist/headroom.min.js"></script>
+
+    <!-- Vendor JS -->
+    <script src="../../vendor/onscreen/dist/on-screen.umd.min.js"></script>
+    <script src="../../vendor/nouislider/distribute/nouislider.min.js"></script>
+    <script src="../../vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+    <script src="../../vendor/waypoints/lib/jquery.waypoints.min.js"></script>
+    <script src="../../vendor/jarallax/dist/jarallax.min.js"></script>
+    <script src="../../vendor/jquery.counterup/jquery.counterup.min.js"></script>
+    <script src="../../vendor/jquery-countdown/dist/jquery.countdown.min.js"></script>
+    <script src="../../vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="../../vendor/prismjs/prism.js"></script>
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    <!-- Neumorphism JS -->
+    <script src="../../assets/js/neumorphism.js"></script>
+    <script src="../../assets/js/fileUploader.js"></script>
+    <script src="../../assets/js/server_message.js"></script>
+    </body>
+</html>
